@@ -2,16 +2,15 @@ def power(a, b, p):
     """Compute a^b mod p efficiently."""
     return pow(a, b, p)
 
-# Diffie-Hellman parameters (public)
 p = 353 # A large prime number
 g = 3 # Primitive root modulo p
-# Alice's side
+
 a = 97 # Alice's private key
 A = power(g, a, p) # Alice's public key
-# Bob's side
+
 b = 233 # Bob's private key
 B = power(g, b, p) # Bob's public key
-# Key exchange
+
 # Each party uses the other's public key and their own private key
 alice_shared = power(B, a, p)
 bob_shared = power(A, b, p)
