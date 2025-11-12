@@ -1,5 +1,4 @@
 # To implement Caesar Cipher encryption and decryption
-
 def caesar_encrypt(plaintext, key):
     ciphertext = ""
     for char in plaintext:
